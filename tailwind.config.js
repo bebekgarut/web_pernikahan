@@ -6,6 +6,9 @@ module.exports = {
         great: ['Great Vibes'], 
         kausan:['Kaushan Script']
       },
+      screens: {
+        'hp': {'max': '479px'}, 
+      },
     },
   },
   plugins: [],
