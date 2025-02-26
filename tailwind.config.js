@@ -14,7 +14,8 @@ module.exports = {
       },
       colors : {
 'warna1' : '#546034',
-'warna2' : '#b5bf99'
+'warna2' : '#b5bf99',
+'warna3' : '#90a155'
       },
     },
   },
