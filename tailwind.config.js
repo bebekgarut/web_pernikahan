@@ -11,6 +11,7 @@ module.exports = {
       },
       screens: {
         'hp': {'max': '479px'}, 
+        'xs' : {'max' : '639px'}
       },
       colors : {
 'warna1' : '#546034',
