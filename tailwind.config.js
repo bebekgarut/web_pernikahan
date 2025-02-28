@@ -10,8 +10,8 @@ module.exports = {
         breee : ['Bree Serif']
       },
       screens: {
-        'hp': {'max': '479px'}, 
-        'xs' : {'max' : '639px'}
+        'hp': {'max': '480px'}, 
+        'xs' : {'min' : '481px', 'max' : '639px'}
       },
       colors : {
 'warna1' : '#546034',

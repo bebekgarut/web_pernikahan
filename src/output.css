@@ -1017,6 +1017,10 @@ video {
     margin-top: 0px;
   }
 
+  .sm\:hidden {
+    display: none;
+  }
+
   .sm\:size-24 {
     width: 6rem;
     height: 6rem;
@@ -1034,6 +1038,10 @@ video {
     width: 14rem;
   }
 
+  .sm\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .sm\:flex-col {
     flex-direction: column;
   }
@@ -1042,16 +1050,6 @@ video {
     --tw-space-y-reverse: 0;
     margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
-  }
-
-  .sm\:px-14 {
-    padding-left: 3.5rem;
-    padding-right: 3.5rem;
-  }
-
-  .sm\:px-20 {
-    padding-left: 5rem;
-    padding-right: 5rem;
   }
 
   .sm\:px-10 {
@@ -1080,6 +1078,10 @@ video {
     display: flex;
   }
 
+  .md\:hidden {
+    display: none;
+  }
+
   .md\:size-32 {
     width: 8rem;
     height: 8rem;
@@ -1093,8 +1095,16 @@ video {
     width: 7rem;
   }
 
+  .md\:w-44 {
+    width: 11rem;
+  }
+
   .md\:w-full {
     width: 100%;
+  }
+
+  .md\:w-4 {
+    width: 1rem;
   }
 
   .md\:flex-row {
@@ -1115,6 +1125,11 @@ video {
     line-height: 2.25rem;
   }
 
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
   .md\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
@@ -1128,11 +1143,6 @@ video {
   .md\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
-  }
-
-  .md\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
   }
 }
 
@@ -1158,18 +1168,12 @@ video {
     width: 10rem;
   }
 
+  .lg\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
   .lg\:justify-center {
     justify-content: center;
-  }
-
-  .lg\:py-5 {
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-  }
-
-  .lg\:py-7 {
-    padding-top: 1.75rem;
-    padding-bottom: 1.75rem;
   }
 
   .lg\:px-20 {
@@ -1177,9 +1181,24 @@ video {
     padding-right: 5rem;
   }
 
+  .lg\:py-7 {
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+  }
+
   .lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .lg\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
   }
 
   .lg\:text-8xl {
@@ -1199,26 +1218,6 @@ video {
 
   .lg\:text-xl {
     font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-
-  .lg\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
-  }
-
-  .lg\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-
-  .lg\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
-  .lg\:text-lg {
-    font-size: 1.125rem;
     line-height: 1.75rem;
   }
 }
@@ -1248,13 +1247,17 @@ video {
   }
 }
 
-@media (max-width: 479px) {
+@media (max-width: 480px) {
   .hp\:mb-20 {
     margin-bottom: 5rem;
   }
 
   .hp\:mb-6 {
     margin-bottom: 1.5rem;
+  }
+
+  .hp\:flex {
+    display: flex;
   }
 
   .hp\:size-16 {
@@ -1305,11 +1308,6 @@ video {
     padding-bottom: 2rem;
   }
 
-  .hp\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
   .hp\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -1326,7 +1324,11 @@ video {
   }
 }
 
-@media (max-width: 639px) {
+@media (min-width: 481px) and (max-width: 639px) {
+  .xs\:hidden {
+    display: none;
+  }
+
   .xs\:size-20 {
     width: 5rem;
     height: 5rem;
@@ -1344,21 +1346,26 @@ video {
     flex-direction: column;
   }
 
-  .xs\:space-y-8 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(2rem * var(--tw-space-y-reverse));
-  }
-
   .xs\:space-y-2 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
   }
 
+  .xs\:space-y-8 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+  }
+
   .xs\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .xs\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 
   .xs\:text-6xl {
@@ -1369,10 +1376,5 @@ video {
   .xs\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .xs\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
   }
 }
