@@ -1103,6 +1103,10 @@ video {
     width: 14rem;
   }
 
+  .sm\:w-52 {
+    width: 13rem;
+  }
+
   .sm\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -1448,6 +1452,10 @@ video {
     width: 100%;
   }
 
+  .hp\:w-36 {
+    width: 9rem;
+  }
+
   .hp\:flex-col {
     flex-direction: column;
   }
@@ -1511,6 +1519,10 @@ video {
 
   .xs\:w-full {
     width: 100%;
+  }
+
+  .xs\:w-44 {
+    width: 11rem;
   }
 
   .xs\:flex-col {
