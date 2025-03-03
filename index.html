@@ -117,7 +117,7 @@
                         <p class="font-belleza lg:text-xl">Masjid Raudhatul Muttaqin</p>  
                     </div>
                     <div class="flex justify-center">
-                        <button onclick="window.location.href='https://maps.app.goo.gl/vrL97jHfSTqRasjaA'"
+                        <button onclick="window.open('https://maps.app.goo.gl/vrL97jHfSTqRasjaA')"
                             class=" bg-gradient-to-r from-warna1 via-warna2 to-warna1 text-base lg:text-xl font-breee py-1 px-4 text-white rounded-lg mt-4">
                             <i class="fa-solid fa-location-dot mr-2"></i>Google Maps</button>
                     </div>
@@ -142,7 +142,7 @@
                         <p class="font-belleza lg:text-xl">Jalan SDN 08 Pariangan, Jorong Sikaladi Kecamatan Pariangan</p>  
                     </div>
                     <div class="flex justify-center">
-                        <button onclick="window.location.href='https://maps.app.goo.gl/vrL97jHfSTqRasjaA'"
+                        <button onclick="window.open('https://maps.app.goo.gl/vrL97jHfSTqRasjaA')"
                             class="bg-gradient-to-r from-warna1 via-warna2 to-warna1 text-base lg:text-xl font-breee py-1 px-4 text-white rounded-lg mt-4">
                             <i class="fa-solid fa-location-dot mr-2"></i>Google Maps</button>
                     </div>
@@ -235,40 +235,8 @@
                                 <button onclick="tambahKomentar()" class=" bg-gradient-to-r from-warna1 via-warna2 to-warna1 text-base font-breee py-1 px-2 text-white rounded-lg">
                                     <i class="fa-solid fa-paper-plane mr-2"></i>Kirim</button>
                             </div>
-                    <div class="space-y-2 max-h-96 overflow-y-auto">
-                        <div class="flex flex-col bg-white w-full text-warna1 px-2 py-1 rounded-lg">
-                            <div class="flex justify-between mb-1 items-center">
-                                <p class="font-breee">Lorem Ipsum</p>
-                                 <p class="text-xs"><i class="fa-solid fa-clock mr-1"></i>3 jam yang lalu</p>
-                            </div>
-                            <div class="text-xs">
-                                <p>
-                                    liverpool Football Club is a professional football club based in Liverpool, England. The club competes in the Premier League, the top tier of English football. Founded in 1892, the club joined the Football League the following year and has played its home games at Anfield since its formation. Liverpool is one of the most valuable and widely supported clubs in the world.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col bg-white w-full text-warna1 px-2 py-1 rounded-lg">
-                            <div class="flex justify-between mb-1 items-center">
-                                <p class="font-breee">Lorem Ipsum</p>
-                                 <p class="text-xs"><i class="fa-solid fa-clock mr-1"></i>3 jam yang lalu</p>
-                            </div>
-                            <div class="text-xs">
-                                <p>
-                                    liverpool Football Club is a professional football club based in Liverpool, England. The club competes in the Premier League, the top tier of English football. Founded in 1892, the club joined the Football League the following year and has played its home games at Anfield since its formation. Liverpool is one of the most valuable and widely supported clubs in the world.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="flex flex-col bg-white w-full text-warna1 px-2 py-1 rounded-lg">
-                            <div class="flex justify-between mb-1 items-center">
-                                <p class="font-breee">Lorem Ipsum</p>
-                                 <p class="text-xs"><i class="fa-solid fa-clock mr-1"></i>3 jam yang lalu</p>
-                            </div>
-                            <div class="text-xs">
-                                <p>
-                                    liverpool Football Club is a professional football club based in Liverpool, England. The club competes in the Premier League, the top tier of English football. Founded in 1892, the club joined the Football League the following year and has played its home games at Anfield since its formation. Liverpool is one of the most valuable and widely supported clubs in the world.
-                                </p>
-                            </div>
-                        </div>
+                    <div class="space-y-2 lg:max-h-72 sm:max-h-80 xs:max-h-96 hp:max-h-96 overflow-y-auto px-1 w-full" id="listKomentar">
+                      
                     </div>
                 </div>
             </div>
@@ -286,11 +254,11 @@
                         <p class="font-breee text-center sm:text-lg md:w-1/2">Doa Restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika memberi adalah ungkapan tanda kasih Anda, Anda dapat memberi gift.</p>
                     </div>
                     <div class="flex justify-center">
-                        <button type="submit"
+                        <button onclick="toggleGiftSection()"
                             class="bg-gradient-to-r from-warna1 via-warna2 to-warna1 text-base font-breee py-1 px-4 md:text-lg text-white rounded-lg border-2">
                             <i class="fa-solid fa-gift mr-2"></i>Kirim Hadiah</button>
                     </div>
-                    <div class="space-y-2 flex flex-col justify-center items-center">
+                    <div id="giftSection" class="space-y-2 flex flex-col justify-center items-center overflow-hidden" style="height: 0; opacity: 0;">
                         <div class="w-80 h-44 bg-gradient-to-r from-warna3 to-lime-950 rounded-2xl shadow-lg relative text-white p-5">
                             <img src="img/F9_I3.png" 
                                 alt="Logo Bank" class="w-14 absolute top-4 right-5">
@@ -298,8 +266,8 @@
                                 alt="Chip" class="w-6 absolute top-12 left-5">
                             <p class="text-sm font-semibold mt-14 tracking-widest">Mulda Ladya</p>
                             <p id="noRek" class="text-sm font-bold tracking-widest">1234 5678 9012 3456</p>
-                            <button onclick="copyToClipboard()" 
-                                class="mt-2 border bg-gradient-to-r from-warna1 via-warna2 to-warna1 text-white text-sm px-2 py-1 rounded-lg flex items-center">
+                            <button onclick="copyToClipboard('noRek', 'Nomor Rekening berhasil disalin!')" 
+                                class="mt-2 border bg-gradient-to-r from-warna1 via-warna2 to-warna1 text-white font-breee text-sm px-2 py-1 rounded-lg flex items-center">
                                 <i class="fa-solid fa-copy mr-2"></i> Salin No. Rekening
                             </button>
                         </div>
@@ -309,18 +277,17 @@
                             <img src="img/F9_I2.png" 
                                 alt="Chip" class="w-6 absolute top-12 left-5">
                             <p class="text-sm font-semibold mt-14 tracking-widest">Mulda Ladya</p>
-                            <p id="noRek" class="text-sm font-bold tracking-widest">1234 5678 9012 3456</p>
-                            <button onclick="copyToClipboard()" 
-                                class="mt-2 border bg-gradient-to-r from-warna1 via-warna2 to-warna1 text-white text-sm px-2 py-1 rounded-lg flex items-center">
+                            <p id="noDana" class="text-sm font-bold tracking-widest">1234 5678 9012 3456</p>
+                            <button onclick="copyToClipboard('noDana', 'Nomor Dana berhasil disalin!')" 
+                                class="mt-2 border bg-gradient-to-r from-warna1 via-warna2 to-warna1 font-breee text-white text-sm px-2 py-1 rounded-lg flex items-center">
                                 <i class="fa-solid fa-copy mr-2"></i> Salin No. Dana
                             </button>
                         </div>
                         <div class="bg-warna3 flex flex-col items-center text-center py-2 px-2 rounded-xl">
                            <img src="img/F9_I.png" class="w-1/3" alt="">
-                            <p class="font-breee">Jalan Raya Sabu-Andaleh, Jorong Sikaladi  Kecamatan Pariangan</p>
-                            <p class="font-breee">Penerima : Mulda Ladya</p>
+                            <p id="alamatSalin" class="font-breee">Jalan Raya Sabu-Andaleh, Jorong Sikaladi  Kecamatan Pariangan <br> Penerima : Mulda Ladya</p>
                             <div class="flex justify-center">
-                                <button 
+                                <button onclick="copyToClipboard('alamatSalin', 'Alamat berhasil disalin!')"
                                     class="bg-gradient-to-r from-warna1 via-warna2 to-warna1 text-base font-breee py-1 px-4 text-white rounded-lg mt-3 border">
                                     <i class="fa-regular fa-copy mr-2"></i>Copy Alamat</button>
                             </div>
@@ -345,6 +312,11 @@
             </div>
         </main>
     </section>
+
+    <div id="toast" class="hidden fixed bottom-5 left-1/2 -translate-x-1/2 bg-warna1 text-white px-4 py-2 rounded-lg shadow-md transition-all">
+        Komentar berhasil dikirim!
+    </div>
+    
 </body>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -393,6 +365,51 @@
     });
     
 </script>
+
+<script>
+    let isGiftOpen = false; 
+
+    function toggleGiftSection() {
+        let giftSection = document.getElementById("giftSection");
+
+        if (!isGiftOpen) {
+            gsap.to(giftSection, { height: "auto", opacity: 1, duration: 1, ease: "power2.out" });
+        } else {
+            gsap.to(giftSection, { height: 0, opacity: 0, duration: 0.5, ease: "power2.in" });
+        }
+
+        isGiftOpen = !isGiftOpen;
+    }
+
+    function copyToClipboard(elementId, message) {
+        const textToCopy = document.getElementById(elementId).innerText;
+    
+        navigator.clipboard.writeText(textToCopy).then(() => {
+            showToast2(message);
+        }).catch(err => {
+            console.error("Gagal menyalin teks: ", err);
+        });
+    }
+    
+    function showToast2(message) {
+        const toast = document.createElement("div");
+        toast.innerText = message;
+        toast.className = "fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-warna1 text-white px-4 py-2 rounded-lg shadow-lg transition-opacity opacity-0";
+        
+        document.body.appendChild(toast);
+    
+        setTimeout(() => {
+            toast.style.opacity = "1";
+        }, 100);
+    
+        setTimeout(() => {
+            toast.style.opacity = "0";
+            setTimeout(() => toast.remove(), 500);
+        }, 2000);
+    }
+    
+</script>
+
 
 <script>
    
@@ -490,19 +507,12 @@
     };
 </script>
 
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
-
 <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-analytics.js";
-    import { getDatabase, ref, push  } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-database.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-  
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    import { getDatabase, ref, push, onValue, query, orderByKey } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-database.js";
+
     const firebaseConfig = {
       apiKey: "AIzaSyAmX_It9hLj5lrXRKGluYMEa_99XAQzWms",
       authDomain: "web-undangan-2c97e.firebaseapp.com",
@@ -514,7 +524,6 @@
       databaseURL: "https://web-undangan-2c97e-default-rtdb.firebaseio.com",
     };
   
-    // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
     const database = getDatabase(app);
@@ -533,22 +542,70 @@
             komentar: komentar,
             waktu: waktu
         }).then(() => {
-            alert("Komentar berhasil dikirim!");
+            showToast("Komentar berhasil dikirim!", "success");
             document.getElementById("namaPengirim").value = "";
             document.getElementById("komentar").value = "";
         }).catch((error) => {
             console.error("Error:", error);
-            alert("Gagal mengirim komentar!");
+            showToast("Gagal mengirim komentar!", "error");
         });
         document.getElementById("namaPengirim").value = "";
         document.getElementById("komentar").value = "";
     }
 
     window.tambahKomentar = tambahKomentar;
+
+    function tampilkanKomentar() {
+        const listKomentar = document.getElementById("listKomentar");
+        const komentarRef = query(ref(database, "komentar"), orderByKey());
+    
+        onValue(komentarRef, (snapshot) => {
+            listKomentar.innerHTML = "";
+            if (snapshot.exists()) {
+                const komentarArray = [];
+    
+                snapshot.forEach((childSnapshot) => {
+                    const data = childSnapshot.val();
+                    const komentarItem = `
+                        <div class="flex flex-col bg-white w-full text-warna1 px-2 py-1 md:py-2 rounded-lg">
+                            <div class="flex justify-between mb-1 items-center">
+                                <p class="font-breee md:text-xl">${data.nama}</p>
+                                <p class="text-xs"><i class="fa-solid fa-clock mr-1"></i>${data.waktu}</p>
+                            </div>
+                            <div class="text-xs">
+                                <p>${data.komentar}</p>
+                            </div>
+                        </div>
+                    `;
+                    komentarArray.push(komentarItem);
+                });
+    
+                listKomentar.innerHTML = komentarArray.reverse().join("");
+            } else {
+                listKomentar.innerHTML = "<p class='text-gray-500 text-center'>Belum ada komentar</p>";
+            }
+        });
+    }
+
+    window.onload = tampilkanKomentar;
   </script>
 
+<script>
+    function showToast(message, type = "success") {
+        const toast = document.getElementById("toast");
+    
+        toast.classList.remove("bg-green-500", "bg-red-500");
+        toast.classList.add(type === "error" ? "bg-red-500" : "bg-green-500");
+    
+        toast.textContent = message;
+        toast.classList.remove("hidden");
+        toast.classList.add("opacity-100");
 
-
-
+        setTimeout(() => {
+            toast.classList.add("hidden");
+            toast.classList.remove("opacity-100");
+        }, 3000);
+    }
+</script>
 
 </html>
