@@ -22,16 +22,16 @@
 <body class="bg-warna1">
     <section id="section1" class="flex w-full justify-center items-center min-h-screen">
         <main class="w-full min-h-screen flex flex-col items-center bg-cover bg-center shadow-2xl" style="background-image: url('img/F1.jpg');">
-            <div class="px-8 py-24 hp:space-y-12 xl:space-y-10">
+            <div class="px-8 py-24 hp:space-y-12 space-y-12">
                 <p class="text-2xl text-center font-contrail font-medium mb-4 text-white hp:mb-20">The Wedding Of</p>
                 <div class="space-y-4">
                     <p class="text-7xl text-left font-great text-white hp:mb-6">Ladya</p>
                     <p class="text-4xl mb-3 font-kausan text-center text-white hp:mb-6">&</p>
-                    <p class="text-7xl mb-8 font-great text-right text-white hp">Ilham</p>
+                    <p class="text-7xl mb-8 font-great text-right text-white">Ilham</p>
                 </div>
                 <div>
                     <p class="italic font-semibold text-xl text-center text-white">Dear : </p>
-                    <p class="italic font-semibold text-2xl text-center text-white">Yang diundang & keluarga </p>
+                    <p class="italic font-semibold text-2xl text-center text-white" id="namaTamu">Yang diundang & Keluarga</p>
                 </div>
                 <div class="flex justify-center">
                     <button onclick="document.getElementById('section2').scrollIntoView({ behavior: 'smooth' });" 
@@ -76,26 +76,25 @@
                 </div>
                 <div class="grid grid-cols-4 gap-6 text-white text-center">
                     <div class="flex-col justify-center flex items-center text-white border-2 border-warna1 px-2 py-1 -space-y-2 rounded-lg hp:size-16 xs:size-20 sm:size-24 md:size-32 lg:size-40">
-                        <p class="font-breee hp:text-xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-8xl">10</p>
+                        <p class="font-breee hp:text-xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-8xl" id="days"></p>
                         <p class="font-breee hp:text-base xs:text-xl sm:text-2xl md:text-3xl">Hari</p>  
                     </div>
                 
                     <div class="flex-col justify-center flex items-center text-white border-2 border-warna1 px-2 py-1 -space-y-2 rounded-lg hp:size-16 xs:size-20 sm:size-24 md:size-32 lg:size-40">
-                        <p class="font-breee hp:text-xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-8xl">23</p>
+                        <p class="font-breee hp:text-xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-8xl" id="hours"></p>
                         <p class="font-breee hp:text-base xs:text-xl sm:text-2xl md:text-3xl">Jam</p>  
                     </div>
                     <div class="flex-col justify-center flex items-center text-white border-2 border-warna1 px-2 py-1 -space-y-2 rounded-lg hp:size-16 xs:size-20 sm:size-24 md:size-32 lg:size-40">
-                        <p class="font-breee hp:text-xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-8xl">46</p> 
+                        <p class="font-breee hp:text-xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-8xl" id="minutes"></p> 
                         <p class="font-breee hp:text-base xs:text-xl sm:text-2xl md:text-3xl">Menit</p>  
                     </div>
                     <div class="flex-col justify-center flex items-center text-white border-2 border-warna1 px-2 py-1 -space-y-2 rounded-lg hp:size-16 xs:size-20 sm:size-24 md:size-32 lg:size-40">
-                        <p class="font-breee hp:text-xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-8xl">59</p>
+                        <p class="font-breee hp:text-xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-8xl" id="seconds">59</p>
                         <p class="font-breee hp:text-base xs:text-xl sm:text-2xl md:text-3xl">Detik</p>  
                     </div>
                 </div>
                 <div class="flex justify-center">
-                    <button 
-                    class="flex items-center bg-gradient-to-r from-warna1 via-warna2 to-warna1 text-xl md:text-2xl font-breee py-1 px-4 text-white rounded-lg mt-4">
+                    <button id="save-the-date" class="flex items-center bg-gradient-to-r from-warna1 via-warna2 to-warna1 text-xl md:text-2xl font-breee py-1 px-4 text-white rounded-lg mt-4">
                     <img src="img/F3_I.png" class="w-5 h-5 mr-2" alt="">Save the Date</button>
                 </div>
             </div>
@@ -118,7 +117,7 @@
                         <p class="font-belleza lg:text-xl">Masjid Raudhatul Muttaqin</p>  
                     </div>
                     <div class="flex justify-center">
-                        <button 
+                        <button onclick="window.location.href='https://maps.app.goo.gl/vrL97jHfSTqRasjaA'"
                             class=" bg-gradient-to-r from-warna1 via-warna2 to-warna1 text-base lg:text-xl font-breee py-1 px-4 text-white rounded-lg mt-4">
                             <i class="fa-solid fa-location-dot mr-2"></i>Google Maps</button>
                     </div>
@@ -143,8 +142,8 @@
                         <p class="font-belleza lg:text-xl">Jalan SDN 08 Pariangan, Jorong Sikaladi Kecamatan Pariangan</p>  
                     </div>
                     <div class="flex justify-center">
-                        <button 
-                            class=" bg-gradient-to-r from-warna1 via-warna2 to-warna1 text-base lg:text-xl font-breee py-1 px-4 text-white rounded-lg mt-4">
+                        <button onclick="window.location.href='https://maps.app.goo.gl/vrL97jHfSTqRasjaA'"
+                            class="bg-gradient-to-r from-warna1 via-warna2 to-warna1 text-base lg:text-xl font-breee py-1 px-4 text-white rounded-lg mt-4">
                             <i class="fa-solid fa-location-dot mr-2"></i>Google Maps</button>
                     </div>
                 </div>
@@ -199,15 +198,15 @@
                     <div>
                         <p class="text-5xl sm:text-6xl lg:text-8xl text-center font-contrail font-medium text-white">RSVP</p>
                     </div>
-                    <form action="" class="">
+                    <form id="rsvpForm" >
                     <div class="mb-2">
-                        <input placeholder="Isi nama" class="w-full sm:text-xl lg:text-2xl px-2 py-1 font-breee text-warna1 rounded-lg" type="text">
+                        <input id="namaTamuRSVP" placeholder="Isi nama" class="w-full sm:text-xl lg:text-2xl px-2 py-1 font-breee text-warna1 rounded-lg" type="text" required>
                     </div>
                     <div class="flex flex-col px-1">
                         <label class="text-left font-breee sm:text-xl lg:text-2xl" for="">Konfirmasi</label>
-                        <label class="font-breee sm:text-xl lg:text-2xl" for=""><input placeholder="" type="radio" class="mr-1 accent-warna1 sm:text-xl lg:text-2xl" name="konfirmasi" id="" required>Iya, Saya akan datang.</label>
-                        <label class="font-breee sm:text-xl lg:text-2xl" for=""><input placeholder="" type="radio" class="mr-1 accent-warna1 sm:text-xl lg:text-2xl" name="konfirmasi" id="" required>Saya masih ragu</label>
-                        <label class="font-breee sm:text-xl lg:text-2xl" for=""><input placeholder="" type="radio" class="mr-1 accent-warna1 sm:text-xl lg:text-2xl" name="konfirmasi" id="" required>Maaf, Saya tidak bisa datang.</label>
+                        <label class="font-breee sm:text-xl lg:text-2xl" for=""><input placeholder="" type="radio" class="mr-1 accent-warna1 sm:text-xl lg:text-2xl" name="konfirmasi" id="" value="Iya, Saya akan datang." required>Iya, Saya akan datang.</label>
+                        <label class="font-breee sm:text-xl lg:text-2xl" for=""><input placeholder="" type="radio" class="mr-1 accent-warna1 sm:text-xl lg:text-2xl" name="konfirmasi" id="" value="Saya masih ragu" required>Saya masih ragu</label>
+                        <label class="font-breee sm:text-xl lg:text-2xl" for=""><input placeholder="" type="radio" class="mr-1 accent-warna1 sm:text-xl lg:text-2xl" name="konfirmasi" id="" value="Maaf, Saya tidak bisa datang." required>Maaf, Saya tidak bisa datang.</label>
                     </div>
                     <div class="flex justify-center">
                         <button type="submit"
@@ -226,18 +225,16 @@
                     <div class="">
                         <p class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center font-contrail font-medium text-white mb-1">Kirim Ucapan & Doa</p>
                     </div>
-                        <form action="" class="w-full">
-                            <div class="mb-2">
-                                <input placeholder="Isi nama" class="w-full px-2 py-1 font-breee text-warna1 rounded-lg" type="text">
+                            <div class="mb-2 w-full">
+                                <input id="namaPengirim" placeholder="Isi nama" class="w-full px-2 py-1 font-breee text-warna1 rounded-lg" type="text" required>
                             </div>
-                            <div class="mb-2">
-                                <textarea name="komen" rows="3" placeholder="Ucapan dan Doa" class="w-full px-2 py-1 font-breee text-warna1 rounded-lg" id=""></textarea>
+                            <div class="mb-2 w-full">
+                                <textarea id="komentar" name="komentar" rows="3" placeholder="Ucapan dan Doa" class="w-full px-2 py-1 font-breee text-warna1 rounded-lg" required></textarea>
                             </div>
                             <div class="flex self-start">
-                                <button type="submit" class=" bg-gradient-to-r from-warna1 via-warna2 to-warna1 text-base font-breee py-1 px-2 text-white rounded-lg">
+                                <button onclick="tambahKomentar()" class=" bg-gradient-to-r from-warna1 via-warna2 to-warna1 text-base font-breee py-1 px-2 text-white rounded-lg">
                                     <i class="fa-solid fa-paper-plane mr-2"></i>Kirim</button>
                             </div>
-                        </form>
                     <div class="space-y-2 max-h-96 overflow-y-auto">
                         <div class="flex flex-col bg-white w-full text-warna1 px-2 py-1 rounded-lg">
                             <div class="flex justify-between mb-1 items-center">
@@ -374,7 +371,7 @@
                     gsap.from("#section2 img", {
                         opacity: 0,
                         scale: 0.8,
-                        duration: 3.5,
+                        duration: 2.5,
                         ease: "elastic.out(1, 0.5)",
                         stagger: 0.3
                     });
@@ -396,4 +393,162 @@
     });
     
 </script>
+
+<script>
+   
+    const urlParams = new URLSearchParams(window.location.search);
+    const namaTamu = urlParams.get('to');
+
+    if (namaTamu) {
+        document.getElementById('namaTamu').textContent = namaTamu;
+    }
+</script>
+
+<script>
+    const targetDate = new Date("April 8, 2025 10:00:00").getTime();
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const timeLeft = targetDate - now;
+
+        if (timeLeft <= 0) {
+            document.getElementById("days").textContent = "0";
+            document.getElementById("hours").textContent = "0";
+            document.getElementById("minutes").textContent = "0";
+            document.getElementById("seconds").textContent = "0";
+            return;
+        }
+
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        document.getElementById("days").textContent = days;
+        document.getElementById("hours").textContent = hours;
+        document.getElementById("minutes").textContent = minutes;
+        document.getElementById("seconds").textContent = seconds;
+    }
+
+    setInterval(updateCountdown, 1000);
+
+    updateCountdown();
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const eventTitle = "Resepsi Ladya & Ilham";
+        const eventLocation = "Jalan SDN 08 Pariangan, Jorong Sikaladi Kecamatan Pariangan";
+        const eventDetails = "Kami mengundang Anda untuk hadir di acara pernikahan kami!";
+        
+        const startDate = "20250408T030000Z"; 
+        const endDate = "20250408T100000Z";  
+        
+        const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventTitle)}&dates=${startDate}/${endDate}&details=${encodeURIComponent(eventDetails)}&location=${encodeURIComponent(eventLocation)}&sf=true&output=xml`;
+
+        document.getElementById("save-the-date").setAttribute("window.location.href", googleCalendarUrl);
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("save-the-date").addEventListener("click", function () {
+            const eventTitle = "Resepsi Ladya & Ilham";
+            const eventLocation = "Jalan SDN 08 Pariangan, Jorong Sikaladi Kecamatan Pariangan";
+            const eventDetails = "Kami mengundang Anda untuk hadir di acara pernikahan kami!";
+            
+            const startDate = "20250408T030000Z"; 
+            const endDate = "20250408T100000Z";  
+
+            const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventTitle)}&dates=${startDate}/${endDate}&details=${encodeURIComponent(eventDetails)}&location=${encodeURIComponent(eventLocation)}&sf=true&output=xml`;
+
+            window.open(googleCalendarUrl, "_blank");
+        });
+    });
+</script>
+
+<script>
+    document.getElementById("rsvpForm").onsubmit = function (e) {
+        e.preventDefault(); 
+
+        const nama = document.getElementById("namaTamuRSVP").value;
+        const konfirmasi = document.querySelector('input[name="konfirmasi"]:checked').value;
+
+        if (!nama || !konfirmasi) {
+            alert("Mohon isi semua kolom");
+            return;
+        }
+
+        const pesan = `Halo, saya *${nama}* ingin memberikan konfirmasi kehadiran:
+        %0A${konfirmasi}`;
+
+        const nomorWA = "6283180168086";
+        
+        const url = `https://wa.me/${nomorWA}?text=${pesan}`;
+
+        window.open(url, "_blank");
+    };
+</script>
+
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-analytics.js";
+    import { getDatabase, ref, push  } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-database.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAmX_It9hLj5lrXRKGluYMEa_99XAQzWms",
+      authDomain: "web-undangan-2c97e.firebaseapp.com",
+      projectId: "web-undangan-2c97e",
+      storageBucket: "web-undangan-2c97e.firebasestorage.app",
+      messagingSenderId: "793743297557",
+      appId: "1:793743297557:web:2acc43256ca7f4c752d21c",
+      measurementId: "G-Y4EQD216MD",
+      databaseURL: "https://web-undangan-2c97e-default-rtdb.firebaseio.com",
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const database = getDatabase(app);
+
+    function tambahKomentar() {
+        const nama = document.getElementById("namaPengirim").value;
+        const komentar = document.getElementById("komentar").value;
+        if (nama.trim() === "" || komentar.trim() === "") {
+            alert("Nama dan komentar harus diisi!");
+            return;
+        }
+        const waktu = new Date().toLocaleString("id-ID");
+
+        push(ref(database, 'komentar'), {
+            nama: nama,
+            komentar: komentar,
+            waktu: waktu
+        }).then(() => {
+            alert("Komentar berhasil dikirim!");
+            document.getElementById("namaPengirim").value = "";
+            document.getElementById("komentar").value = "";
+        }).catch((error) => {
+            console.error("Error:", error);
+            alert("Gagal mengirim komentar!");
+        });
+        document.getElementById("namaPengirim").value = "";
+        document.getElementById("komentar").value = "";
+    }
+
+    window.tambahKomentar = tambahKomentar;
+  </script>
+
+
+
+
+
 </html>
