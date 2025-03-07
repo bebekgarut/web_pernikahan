@@ -191,10 +191,10 @@
             </div>
         </main>
     </section>
-    <section id="section7" class="flex w-full justify-center items-center">
+    <section id="section7" class="flex w-full justify-center items-center efek">
         <main class="w-full lg:min-h-screen flex flex-col justify-center items-center bg-cover bg-center shadow-2xl" style="background-image: url('img/F7.jpg');">
             <div class="px-2 py-8">
-                <div class="flex-col hp:space-y-2 xs:space-y-2 justify-center flex items-center text-white border-2 border-warna1 sm:px-7 sm:py-5 px-5 py-3 space-y-6 rounded-lg">
+                <div class="flex-col hp:space-y-2 xs:space-y-2 justify-center flex items-center text-white border-2 border-warna1 sm:px-7 sm:py-5 px-5 py-3 space-y-6 rounded-lg animasi7">
                     <div>
                         <p class="text-5xl sm:text-6xl lg:text-8xl text-center font-contrail font-medium text-white">RSVP</p>
                     </div>
@@ -236,7 +236,7 @@
                                     <i class="fa-solid fa-paper-plane mr-2"></i>Kirim</button>
                             </div>
                     <div class="space-y-2 lg:max-h-72 sm:max-h-80 xs:max-h-96 hp:max-h-96 overflow-y-auto px-1 w-full" id="listKomentar">
-                      
+                    
                     </div>
                 </div>
             </div>
@@ -460,6 +460,69 @@
 </script>
 
 <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const section = document.querySelector("#section7");
+    
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    gsap.to("#section7", { 
+                        opacity: 1, 
+                        y: 0, 
+                        duration: 1, 
+                        ease: "power3.out" 
+                    });
+    
+                    gsap.from("#section7 .animasi7", {
+                        opacity: 0,
+                        y: 50,
+                        duration: 3.5,
+                        stagger: 0.3,
+                        ease: "power3.out"
+                    });
+    
+                    observer.unobserve(section);
+                }
+            });
+        }, { threshold: 0.2 });
+    
+        observer.observe(section);
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const section = document.querySelector("#section8");
+    
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    gsap.to("#section8", { 
+                        opacity: 1, 
+                        y: 0, 
+                        duration: 1, 
+                        ease: "power3.out" 
+                    });
+    
+                    gsap.from("#section8 .animasi8", {
+                        opacity: 0,
+                        y: 50,
+                        duration: 3.5,
+                        stagger: 0.3,
+                        ease: "power3.out"
+                    });
+    
+                    observer.unobserve(section);
+                }
+            });
+        }, { threshold: 0.2 });
+    
+        observer.observe(section);
+    });
+</script>
+
+
+<script>
     let isGiftOpen = false; 
 
     function toggleGiftSection() {
@@ -487,7 +550,7 @@
     function showToast2(message) {
         const toast = document.createElement("div");
         toast.innerText = message;
-        toast.className = "fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-warna1 text-white px-4 py-2 rounded-lg shadow-lg transition-opacity opacity-0";
+        toast.className = "fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-warna2 text-white px-4 py-2 rounded-lg shadow-lg transition-opacity opacity-0";
         
         document.body.appendChild(toast);
     
@@ -659,7 +722,7 @@
                 snapshot.forEach((childSnapshot) => {
                     const data = childSnapshot.val();
                     const komentarItem = `
-                        <div class="flex flex-col bg-white w-full text-warna1 px-2 py-1 md:py-2 rounded-lg">
+                        <div class="flex flex-col bg-white w-full text-warna1 px-3 py-1 md:py-2 rounded-lg">
                             <div class="flex justify-between mb-1 items-center">
                                 <p class="font-breee md:text-xl">${data.nama}</p>
                                 <p class="text-xs"><i class="fa-solid fa-clock mr-1"></i>${data.waktu}</p>
