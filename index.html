@@ -150,7 +150,7 @@
             </div>
         </main>
     </section>
-    <section id="section6" class="flex w-full justify-center items-center">
+    <section id="section6" class="flex w-full justify-center items-center efek">
         <main class="w-full lg:min-h-screen flex flex-col items-center bg-cover bg-center shadow-2xl" style="background-image: url('img/F6.jpg');">
             <div class="px-2 py-8 ">
                 <div class="mb-2">
@@ -158,34 +158,34 @@
                 </div>
                 <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-4">
                     <div>
-                        <img src="img/F6_1.jpg" class="w-32 md:w-44 rounded-lg" alt="gambar">
+                        <img src="img/F6_1.jpg" class="gallery-item w-32 md:w-44 rounded-lg" alt="gambar">
                     </div>                   
                     <div>
-                        <img src="img/F6_2.jpg" class="w-32 md:w-44 rounded-lg" alt="gambar">
+                        <img src="img/F6_2.jpg" class="gallery-item w-32 md:w-44 rounded-lg" alt="gambar">
                     </div>                   
                     <div>
-                        <img src="img/F6_3.jpg" class="w-32 md:w-44 rounded-lg" alt="gambar">
+                        <img src="img/F6_3.jpg" class="gallery-item w-32 md:w-44 rounded-lg" alt="gambar">
                     </div>                   
                     <div>
-                        <img src="img/F6_4.jpg" class="w-32 md:w-44 rounded-lg" alt="gambar">
+                        <img src="img/F6_4.jpg" class="gallery-item w-32 md:w-44 rounded-lg" alt="gambar">
                     </div>                   
                     <div>
-                        <img src="img/F6_5.jpg" class="w-32 md:w-44 rounded-lg" alt="gambar">
+                        <img src="img/F6_5.jpg" class="gallery-item w-32 md:w-44 rounded-lg" alt="gambar">
                     </div>                   
                     <div>
-                        <img src="img/F6_6.jpg" class="w-32 md:w-44 rounded-lg" alt="gambar">
+                        <img src="img/F6_6.jpg" class="gallery-item w-32 md:w-44 rounded-lg" alt="gambar">
                     </div>                   
                     <div>
-                        <img src="img/F6_7.jpg" class="w-32 md:w-44 rounded-lg" alt="gambar">
+                        <img src="img/F6_7.jpg" class="gallery-item w-32 md:w-44 rounded-lg" alt="gambar">
                     </div>                   
                     <div>
-                        <img src="img/F6_8.jpg" class="w-32 md:w-44 rounded-lg" alt="gambar">
+                        <img src="img/F6_8.jpg" class="gallery-item w-32 md:w-44 rounded-lg" alt="gambar">
                     </div>                   
                     <div>
-                        <img src="img/F6_1.jpg" class="w-32 md:w-44  sm:hidden lg:flex rounded-lg" alt="gambar">
+                        <img src="img/F6_1.jpg" class="gallery-item w-32 md:w-44  sm:hidden lg:flex rounded-lg" alt="gambar">
                     </div>                   
                     <div>
-                        <img src="img/F6_1.jpg" class="w-32 md:w-44 sm:hidden lg:flex rounded-lg" alt="gambar">
+                        <img src="img/F6_1.jpg" class="gallery-item w-32 md:w-44 sm:hidden lg:flex rounded-lg" alt="gambar">
                     </div>                              
                 </div>
             </div>
@@ -313,7 +313,7 @@
         </main>
     </section>
 
-    <div id="toast" class="hidden fixed bottom-5 left-1/2 -translate-x-1/2 bg-warna1 text-white px-4 py-2 rounded-lg shadow-md transition-all">
+    <div id="toast" class="hidden fixed bottom-5 left-1/2 -translate-x-1/2 bg-warna2 text-warna1 px-4 py-2 rounded-lg shadow-md transition-all">
         Komentar berhasil dikirim!
     </div>
     
@@ -343,9 +343,9 @@
                     gsap.from("#section2 .animasifoto2", {
                         opacity: 0,
                         scale: 0.8,
-                        duration: 2.5,
+                        duration: 3,
                         ease: "elastic.out(1, 0.5)",
-                        stagger: 0.3
+                        stagger: 0.3,
                     });
     
                     gsap.from("#section2 .icon", {
@@ -461,6 +461,37 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
+        const section = document.querySelector("#section6");
+    
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    gsap.to("#section6", { 
+                        opacity: 1, 
+                        y: 0, 
+                        duration: 1, 
+                        ease: "power3.out" 
+                    });
+    
+                    gsap.from(".gallery-item", {
+                        opacity: 0,
+                        scale: 0.8,
+                        duration: 1.2,
+                        stagger: 0.4,
+                        ease: "power2.out"
+                    });
+    
+                    observer.unobserve(section);
+                }
+            });
+        }, { threshold: 0.2 });
+    
+        observer.observe(section);
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
         const section = document.querySelector("#section7");
     
         const observer = new IntersectionObserver(entries => {
@@ -550,7 +581,7 @@
     function showToast2(message) {
         const toast = document.createElement("div");
         toast.innerText = message;
-        toast.className = "fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-warna2 text-white px-4 py-2 rounded-lg shadow-lg transition-opacity opacity-0";
+        toast.className = "fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-warna2 text-warna1 px-4 py-2 rounded-lg shadow-lg transition-opacity opacity-0";
         
         document.body.appendChild(toast);
     
