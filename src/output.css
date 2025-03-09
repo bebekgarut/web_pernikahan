@@ -841,6 +841,11 @@ video {
   background-color: rgb(84 96 52 / var(--tw-bg-opacity, 1));
 }
 
+.bg-warna2 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(181 191 153 / var(--tw-bg-opacity, 1));
+}
+
 .bg-warna3 {
   --tw-bg-opacity: 1;
   background-color: rgb(144 161 85 / var(--tw-bg-opacity, 1));
@@ -849,11 +854,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.bg-warna2 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(181 191 153 / var(--tw-bg-opacity, 1));
 }
 
 .bg-gradient-to-r {
