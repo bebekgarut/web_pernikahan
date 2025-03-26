@@ -1422,16 +1422,12 @@ video {
     min-height: 100vh;
   }
 
-  .xl\:w-1\/4 {
-    width: 25%;
+  .xl\:w-1\/5 {
+    width: 20%;
   }
 
   .xl\:w-2\/5 {
     width: 40%;
-  }
-
-  .xl\:w-1\/5 {
-    width: 20%;
   }
 
   .xl\:space-y-10 > :not([hidden]) ~ :not([hidden]) {
@@ -1443,6 +1439,11 @@ video {
   .xl\:text-8xl {
     font-size: 6rem;
     line-height: 1;
+  }
+
+  .xl\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
