@@ -1358,6 +1358,10 @@ video {
     width: 10rem;
   }
 
+  .lg\:w-full {
+    width: 100%;
+  }
+
   .lg\:grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
@@ -1433,6 +1437,10 @@ video {
 
   .xl\:w-2\/5 {
     width: 40%;
+  }
+
+  .xl\:w-full {
+    width: 100%;
   }
 
   .xl\:space-y-10 > :not([hidden]) ~ :not([hidden]) {
