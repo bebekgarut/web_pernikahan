@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/icon.png">
     <link href="src/output.css" rel="stylesheet">
     <title>Undangan Baralek</title>
     <link rel="preload" as="image" href="img/F1.jpg">
@@ -47,22 +48,25 @@
     </style>
 </head>
 <body class="bg-warna1">
+    <audio id="bg-music" loop>
+        <source src="img/backsound.mp3" type="audio/mpeg">
+    </audio>    
     <section id="section1" class="flex w-full justify-center items-center">
-        <main class="w-full lg:min-h-screen flex flex-col items-center bg-cover bg-center shadow-2xl" style="background-image: url('img/F1.jpg');">
-            <div class="px-8 py-24 hp:space-y-12 space-y-12">
-                <p class="text-2xl text-center font-contrail font-medium mb-4 text-white hp:mb-20">The Wedding Of</p>
-                <div class="space-y-4">
-                    <p class="text-7xl text-left font-great text-white hp:mb-6">Ladya</p>
-                    <p class="text-4xl mb-3 font-kausan text-center text-white hp:mb-6">&</p>
-                    <p class="text-7xl mb-8 font-great text-right text-white">Ilham</p>
+        <main class="w-full min-h-screen flex flex-col items-center bg-cover bg-center shadow-2xl" style="background-image: url('img/F1.jpg');">
+            <div class="hp:mt-72 hp:py-0 px-8 py-24 hp:space-y-0 space-y-12">
+                <p class="text-2xl text-center font-contrail font-medium mb-4 text-white">The Wedding Of</p>
+                <div class="hp:space-y-0 space-y-4">
+                    <p class="text-7xl hp:text-6xl text-left font-great text-white">Ladya</p>
+                    <p class="text-4xl hp:text-3xl mb-3 font-kausan text-center text-white hp:mb-6">&</p>
+                    <p class="text-7xl hp:text-6xl mb-8 font-great text-right text-white">Ilham</p>
                 </div>
                 <div>
-                    <p class="italic font-semibold text-xl text-center text-white">Dear : </p>
-                    <p class="italic font-semibold text-2xl text-center text-white" id="namaTamu">Yang diundang & Keluarga</p>
+                    <p class="italic font-semibold text-xl text-center text-white hp:text-base">Dear : </p>
+                    <p class="italic font-semibold text-2xl text-center text-white hp:text-lg" id="namaTamu">Yang diundang & Keluarga</p>
                 </div>
                 <div class="flex justify-center">
-                    <button onclick="document.getElementById('section2').scrollIntoView({ behavior: 'smooth' });" 
-                    class="bg-gradient-to-r from-warna1 via-warna2 to-warna1 text-xl py-1 px-4 text-white font-semibold rounded-lg mt-4">
+                    <button  onclick="playMusicAndScroll()" 
+                    class="bg-gradient-to-r from-warna1 via-warna2 to-warna1 text-xl hp:text-lg py-1 px-4 text-white font-semibold rounded-lg mt-4">
                     <i class="fa-solid fa-envelope mr-2"></i>Buka Undangan</button>
                 </div>
             </div>
@@ -77,7 +81,7 @@
                 </div>
                 <div class="w-full space-y-4 flex items-center justify-center hp:flex-col xs:flex-col sm:flex-col md:flex-row">
                     <div class="xl:w-1/5 lg:w-1/4 md:w-1/5 flex-col justify-center flex items-center text-white">  
-                        <img src="img/F2_2.jpg" class="hp:w-40 xs:w-48 sm:w-56 md:w-full lg:w-full xl:w-full rounded-xl mb-1 items-center border-2 border-warna1 shadow-2xl animasifoto2" alt="" loading="eager">
+                        <img src="img/F2_2.jpg" class="hp:w-40 xs:w-48 sm:w-56 md:w-full rounded-xl mb-1 items-center border-2 border-warna1 shadow-2xl animasifoto2" alt="" loading="eager">
                         <p class="text-center text-xl font-semibold font-belleza lg:text-2xl">Mulda Ladya</p>
                         <p class="text-center text-warna1 font-semibold text-sm -mt-1 sm:mt-0 xl:text-lg">Putri dari</p>
                         <p class="text-center text-warna1 font-semibold text-sm -mt-1 sm:mt-0 xl:text-lg">Bapak Narupa Katik Majo Kayo
@@ -145,7 +149,7 @@
                         <p class="font-belleza lg:text-xl">Masjid Raudhatul Muttaqin</p>  
                     </div>
                     <div class="flex justify-center">
-                        <button onclick="window.open('https://maps.app.goo.gl/vrL97jHfSTqRasjaA')"
+                        <button 
                             class=" bg-gradient-to-r from-warna1 via-warna2 to-warna1 text-base lg:text-xl font-breee py-1 px-4 text-white rounded-lg mt-4">
                             <i class="fa-solid fa-location-dot mr-2"></i>Google Maps</button>
                     </div>
@@ -170,10 +174,37 @@
                         <p class="font-belleza lg:text-xl">Jalan SDN 08 Pariangan, Jorong Sikaladi Kecamatan Pariangan</p>  
                     </div>
                     <div class="flex justify-center">
-                        <button onclick="window.open('https://maps.app.goo.gl/vrL97jHfSTqRasjaA')"
+                        <button
                             class="bg-gradient-to-r from-warna1 via-warna2 to-warna1 text-base lg:text-xl font-breee py-1 px-4 text-white rounded-lg mt-4">
                             <i class="fa-solid fa-location-dot mr-2"></i>Google Maps</button>
                     </div>
+                </div>
+            </div>
+        </main>
+    </section>
+    <section id="section11" class="flex w-full justify-center items-center efek">
+        <main class="w-full lg:min-h-screen flex flex-col justify-center items-center bg-cover bg-center shadow-2xl" style="background-image: url('img/F11.jpg');">
+            <div class="px-4 py-8">
+                <div class="flex-col hp:space-y-2 xs:space-y-2 sm:space-y-2 xl:space-y-4 justify-center flex items-center text-white px-5 py-3 sm:px-10 lg:px-20 lg:py-7 space-y-2 animasi11 bg-warna3 rounded-xl bg-opacity-35">
+                    <div>
+                        <p class="text-3xl xs:text-5xl sm:text-5xl lg:text-7xl xl:text-8xl text-center font-contrail font-medium text-white">Love Story</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="font-breee text-xl lg:text-3xl">Berkenalan kembali</p>
+                        <p class="font-belleza lg:text-xl ">Kami sudah saling mengenal sejak lama, karena tumbuh dilingkungan yang sama, hanya sebatas tahu tanpa adanya komunikasi yang begitu berarti. Waktu berlalu, kami menjalani kehidupan masing-masing, hingga pada suatu hari di akhir tahun 2024, pesan hangat darinya membuka kisah yang lebih indah. Saling bertukar kabar setiap hari, membuat kami saling mengenal lebih jauh, merasa nyaman satu sama lain.
+                        </p>  
+                    </div>
+                    <div class="text-center">
+                        <p class="font-breee text-xl lg:text-3xl">First date</p>
+                        <p class="font-belleza lg:text-xl">First date kami cukup sederhana, jalan-jalan menyusuri tepian danau yang saat itu langit nya berpendar keemasan, percakapan mengalir, membuat rasa nyaman  ini semakin nyata, yang pada akhirnya saling merasakan ”This is the one im looking for”
+                        </p>  
+                    </div>
+                    <div class="text-center">
+                        <p class="font-breee text-xl lg:text-3xl">Long Short Story</p>
+                        <p class="font-belleza lg:text-xl">Tak butuh waktu lama setelah first date itu, dia menyampaikan ingin membawa hubungan ini ke arah yang lebih serius. Aku mencoba meyakinkan hati, dengan kesungguhan dan ketulusan yang dia tunjukkan, dengan banyak do’a yang sudah aku panjatkan selama ini aku InysaAllah bersedia. Kini dengan restu keluarga dan do’a yang tak pernah putus, perjalanan kami menuju satu ikatan suci, kami melangkah menuju lembaran baru. Kami mengundang orang-orang tersayang untuk menjadi bagian dari kebahagiaan kami, menyaksikan awal dari perjalanan yang penuh berkah ini
+                        </p>  
+                    </div>
+                    
                 </div>
             </div>
         </main>
@@ -192,10 +223,13 @@
                         <img src="img/F6_8.jpg" class="gallery-item w-32 md:w-44 rounded-lg" alt="gambar" loading="eager">
                     </div>                   
                     <div>
+                        <img src="img/F6_4.jpg" class="gallery-item w-32 md:w-44 rounded-lg" alt="gambar" loading="eager">
+                    </div>                   
+                    <div>
                         <img src="img/F6_9.jpg" class="gallery-item w-32 md:w-44 rounded-lg" alt="gambar" loading="eager">
                     </div>                   
                     <div>
-                        <img src="img/F6_4.jpg" class="gallery-item w-32 md:w-44 rounded-lg" alt="gambar" loading="eager">
+                        <img src="img/F6_1.jpg" class="gallery-item w-32 md:w-44 rounded-lg" alt="gambar" loading="eager">
                     </div>                   
                     <div>
                         <img src="img/F6_5.jpg" class="gallery-item w-32 md:w-44 rounded-lg" alt="gambar" loading="eager">
@@ -204,13 +238,10 @@
                         <img src="img/F6_6.jpg" class="gallery-item w-32 md:w-44 rounded-lg" alt="gambar" loading="eager">
                     </div>                   
                     <div>
-                        <img src="img/F6_1.jpg" class="gallery-item w-32 md:w-44 rounded-lg" alt="gambar" loading="eager">
+                        <img src="img/F6_3.jpg" class="gallery-item w-32 md:w-44 rounded-lg" alt="gambar" loading="eager">
                     </div>                   
                     <div>
-                        <img src="img/F6_2.jpg" class="gallery-item w-32 md:w-44 rounded-lg" alt="gambar" loading="eager">
-                    </div>                   
-                    <div>
-                        <img src="img/F6_3.jpg" class="gallery-item w-32 md:w-44  sm:hidden lg:flex rounded-lg" alt="gambar" loading="eager">
+                        <img src="img/F6_2.jpg" class="gallery-item w-32 md:w-44  sm:hidden lg:flex rounded-lg" alt="gambar" loading="eager">
                     </div>                   
                     <div>
                         <img src="img/F6_10.jpg" class="gallery-item w-32 md:w-44 sm:hidden lg:flex rounded-lg" alt="gambar" loading="eager">
@@ -293,7 +324,7 @@
                             <img src="img/F9_I2.png" 
                                 alt="Chip" class="w-6 absolute top-12 left-5">
                             <p class="text-sm font-semibold mt-14 tracking-widest">Mulda Ladya</p>
-                            <p id="noRek" class="text-sm font-bold tracking-widest">1234 5678 9012 3456</p>
+                            <p id="noRek" class="text-sm font-bold tracking-widest">0231 0101 7482 531</p>
                             <button onclick="copyToClipboard('noRek', 'Nomor Rekening berhasil disalin!')" 
                                 class="mt-2 border bg-gradient-to-r from-warna1 via-warna2 to-warna1 text-white font-breee text-sm px-2 py-1 rounded-lg flex items-center">
                                 <i class="fa-solid fa-copy mr-2"></i> Salin No. Rekening
@@ -305,7 +336,7 @@
                             <img src="img/F9_I2.png" 
                                 alt="Chip" class="w-6 absolute top-12 left-5">
                             <p class="text-sm font-semibold mt-14 tracking-widest">Mulda Ladya</p>
-                            <p id="noDana" class="text-sm font-bold tracking-widest">1234 5678 9012 3456</p>
+                            <p id="noDana" class="text-sm font-bold tracking-widest">083180168086</p>
                             <button onclick="copyToClipboard('noDana', 'Nomor Dana berhasil disalin!')" 
                                 class="mt-2 border bg-gradient-to-r from-warna1 via-warna2 to-warna1 font-breee text-white text-sm px-2 py-1 rounded-lg flex items-center">
                                 <i class="fa-solid fa-copy mr-2"></i> Salin No. Dana
@@ -346,6 +377,26 @@
     </div>
     
 </body>
+<script>
+    function playMusic() {
+        var audio = document.getElementById("bg-music");
+        if (audio.paused) { 
+            audio.play();
+            document.removeEventListener("wheel", playMusic);
+        document.removeEventListener("touchmove", playMusic);
+        }
+    }
+    
+    function playMusicAndScroll() {
+        playMusic(); 
+        document.getElementById('section2').scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    document.addEventListener("wheel", playMusic, { once: true });
+    document.addEventListener("touchmove", playMusic, { once: true });
+    document.addEventListener("click", playMusic, { once: true });
+    
+    </script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const section = document.querySelector("#section2");
@@ -409,6 +460,37 @@
                     });
     
                     gsap.from("#section3 .animasi3", {
+                        opacity: 0,
+                        y: 50,
+                        duration: 3.5,
+                        stagger: 0.3,
+                        ease: "power3.out"
+                    });
+    
+                    observer.unobserve(section);
+                }
+            });
+        }, { threshold: 0.2 });
+    
+        observer.observe(section);
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const section = document.querySelector("#section11");
+    
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    gsap.to("#section11", { 
+                        opacity: 1, 
+                        y: 0, 
+                        duration: 1, 
+                        ease: "power3.out" 
+                    });
+    
+                    gsap.from("#section11 .animasi11", {
                         opacity: 0,
                         y: 50,
                         duration: 3.5,
